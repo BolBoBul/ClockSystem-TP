@@ -13,12 +13,14 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  DISPLAY: "99.0"  # Set a display for Xvfb
 
 jobs:
 
   build:
+  
+    env:
+      DISPLAY: "99.0"  # Set a display for Xvfb
+      
     services:
       xvfb:
         image: selenium/standalone-chrome:latest
@@ -44,6 +46,10 @@ jobs:
       with:
         path: app/build/reports/tests
 
+
+    - name: Start Xvfb
+      run: Xvfb $DISPLAY -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &
+      
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
     #
@@ -53,8 +59,6 @@ jobs:
       with:
        gradle-version: current
         
-    - name: Start Xvfb
-      run: Xvfb $DISPLAY -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &
 
     
   
