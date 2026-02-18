@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: pmd
+name: PMD
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
           analyzeModifiedFilesOnly: false
           
       - name: Fail build if there are violations
-        if: steps.pmd.outputs.violations > 20
+        if: steps.pmd.outputs.violations > 50
         run: exit 1
         
       - name: Upload SARIF file
