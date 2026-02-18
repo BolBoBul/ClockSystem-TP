@@ -33,7 +33,7 @@ jobs:
       - uses: pmd/pmd-github-action@v2
         id: pmd
         with:
-          rulesets: 'category/java/errorprone.xml, category/java/codestyle'
+          rulesets: 'category/java/errorprone.xml, category/java/codestyle.xml'
       - name: Fail build if there are violations
         if: steps.pmd.outputs.violations != 0
         run: exit 1
