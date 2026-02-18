@@ -1,6 +1,6 @@
-Gradle: ![](https://github.com/BolBoBul/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg)
-PMD: ![](https://github.com/BolBoBul/ClockSystem-TP/actions/workflows/pmd.yml/badge.svg)
-CodeQL: ![](https://github.com/BolBoBul/ClockSystem-TP/actions/workflows/codeql.yml/badge.svg)
+Gradle: ![](https://github.com/BolBoBul/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg)\
+PMD: ![](https://github.com/BolBoBul/ClockSystem-TP/actions/workflows/pmd.yml/badge.svg)\
+CodeQL: ![](https://github.com/BolBoBul/ClockSystem-TP/actions/workflows/codeql.yml/badge.svg)\
 OpenSSF: ![](https://github.com/BolBoBul/ClockSystem-TP/actions/workflows/scorecard.yml/badge.svg)
 
 # ClockSystem
